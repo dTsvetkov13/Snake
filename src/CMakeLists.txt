@@ -1,4 +1,6 @@
 set(SRC_LIST
   ${SRC_LIST}
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/GameObject.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/GameObject.h
   PARENT_SCOPE)
