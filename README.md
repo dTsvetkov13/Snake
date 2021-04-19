@@ -1,2 +1,24 @@
 # Snake
 This is project representing the game Snake written in C++ using SDL2 for graphics.
+
+### Building and Running the project ###
+After you have installed the prerequisites for the project follow the steps below to build and run it.
+
+**Linux**
+
+``` shell
+mkdir build && cd build
+cmake ../
+make -jN #where N is the number of jobs you want to use
+./Snake #run the project
+```
+
+**Windows**\
+It is important to note the you will need the path to the vcpkg installation from the previous steps
+``` shell
+mkdir build && cd build
+cmake -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]\scripts\buildsystems\vcpkg.cmake ../
+cmake --build .
+cd Debug # or Release depending on the build mode
+Snake.exe #run the project
+```
