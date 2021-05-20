@@ -8,3 +8,7 @@ Snake::Snake(const Position& position)
 	: GameObject(position)
 {
 }
+
+void Snake::move()
+{
+}
