@@ -2,6 +2,8 @@
 This is project representing the game Snake written in C++ using SDL2 for graphics.
 
 ### Building and Running the project ###
+To build and run this project you will need SDL2, which you should download and compile. I recommend you to create new folder named "include" and place it there. Otherwise, you will have to change SDL2_DIR variable in CMakeLists.cmake.
+
 After you have installed the prerequisites for the project follow the steps below to build and run it.
 
 **Linux**
