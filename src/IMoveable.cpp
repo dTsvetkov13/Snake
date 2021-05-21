@@ -12,7 +12,7 @@ IMoveable::IMoveable(Direction direction, double speed)
 
 void IMoveable::setDirection(Direction direction)
 {
-	this->direction == direction;
+	this->direction = direction;
 }
 
 void IMoveable::setSpeed(double speed)

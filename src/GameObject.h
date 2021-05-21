@@ -1,30 +1,15 @@
 #pragma once
 
-struct Position
-{
-	double x = 0;
-	double y = 0;
-
-	Position()
-	{
-		this->x = 0;
-		this->y = 0;
-	}
-
-	Position(double x, double y)
-	{
-		this->x = x;
-		this->y = y;
-	}
-};
+#include "SDL.h"
 
 class GameObject
 {
 public:
 	GameObject();
-	GameObject(const Position& position);
+	GameObject(const SDL_Rect& position);
 
-	void setPosition(const Position& position);
+	void setRect(const SDL_Rect& position);
+	virtual bool intersects(const SDL_Rect& rect);
 private:
-	Position position;
+	SDL_Rect rect;
 };

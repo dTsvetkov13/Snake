@@ -8,10 +8,10 @@ class Snake : public GameObject, public IMoveable, public IDrawable
 {
 public:
 	Snake();
-	Snake(const Position& position);
+	Snake(const SDL_Rect& position);
 
 	void move() override;
 	void draw(SDL_Renderer* ren) override;
 private:
-	 
+	
 };

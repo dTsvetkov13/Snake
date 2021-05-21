@@ -4,11 +4,16 @@ Snake::Snake() : GameObject()
 {
 }
 
-Snake::Snake(const Position& position)
-	: GameObject(position)
+Snake::Snake(const SDL_Rect& rect)
+	: GameObject(rect)
 {
 }
 
 void Snake::move()
 {
+}
+
+void Snake::draw(SDL_Renderer* ren)
+{
+
 }
