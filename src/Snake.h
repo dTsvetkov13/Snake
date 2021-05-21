@@ -8,7 +8,7 @@
 #include <vector>
 #include <memory>
 
-class Snake : public GameObject, public IMoveable, public IDrawable
+class Snake : public IMoveable, public IDrawable
 {
 public:
 	Snake();

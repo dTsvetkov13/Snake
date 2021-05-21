@@ -1,5 +1,7 @@
 #pragma once
 
+#include "GameObject.h"
+
 enum class Direction
 {
 	West,
@@ -8,7 +10,7 @@ enum class Direction
 	North
 };
 
-class IMoveable
+class IMoveable : public GameObject
 {
 public:
 	IMoveable();

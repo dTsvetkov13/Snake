@@ -4,7 +4,7 @@ IMoveable::IMoveable() : IMoveable(Direction::North, 0)
 {
 }
 
-IMoveable::IMoveable(Direction direction, double speed)
+IMoveable::IMoveable(Direction direction, double speed) : GameObject()
 {
 	this->setDirection(direction);
 	this->setSpeed(speed);
