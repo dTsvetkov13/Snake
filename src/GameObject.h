@@ -23,6 +23,8 @@ class GameObject
 public:
 	GameObject();
 	GameObject(const Position& position);
+
+	void setPosition(const Position& position);
 private:
 	Position position;
 };
