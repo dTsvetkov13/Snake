@@ -7,6 +7,7 @@ class GameObject
 public:
 	GameObject();
 	GameObject(const SDL_Rect& position);
+	~GameObject();
 
 	void setRect(const SDL_Rect& position);
 	virtual bool intersects(const SDL_Rect& rect);

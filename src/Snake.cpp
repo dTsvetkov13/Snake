@@ -9,6 +9,10 @@ Snake::Snake(const SDL_Rect& rect)
 {
 }
 
+Snake::~Snake()
+{
+}
+
 void Snake::move()
 {
 }

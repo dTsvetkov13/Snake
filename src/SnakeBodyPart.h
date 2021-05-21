@@ -1,6 +1,12 @@
 #pragma once
 
-class SnakeBodyPart
+#include "IDrawable.h"
+#include "GameObject.h"
+
+class SnakeBodyPart : public IDrawable, public GameObject
 {
+public:
+
+private:
 
 };

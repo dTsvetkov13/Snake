@@ -10,6 +10,10 @@ GameObject::GameObject(const SDL_Rect& rect) : GameObject()
 	this->setRect(rect);
 }
 
+GameObject::~GameObject()
+{
+}
+
 void GameObject::setRect(const SDL_Rect& rect)
 {
 	this->rect.x = rect.x;
