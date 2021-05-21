@@ -19,6 +19,9 @@ public:
 	void setDirection(Direction direction);
 	void setSpeed(double speed);
 
+	inline Direction getDirection() { return this->direction; }
+	inline double getSpeed() { return this->speed; }
+
 	virtual void move() = 0;
 private:
 	double speed;
