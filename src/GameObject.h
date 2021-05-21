@@ -10,7 +10,9 @@ public:
 	~GameObject();
 
 	void setRect(const SDL_Rect& position);
+	SDL_Rect* getRect();
+
 	virtual bool intersects(const SDL_Rect& rect);
 private:
-	SDL_Rect rect;
+	SDL_Rect m_rect;
 };
