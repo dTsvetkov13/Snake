@@ -28,4 +28,3 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
-target_link_libraries(${PROJECT_NAME} )
