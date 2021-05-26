@@ -1,12 +1,15 @@
 #pragma once
 
 #include "IDrawable.h"
-#include "GameObject.h"
+#include "IMoveable.h"
 
-class SnakeBodyPart : public IDrawable, public GameObject
+class SnakeBodyPart : public IMoveable, public IDrawable
 {
 public:
+	SnakeBodyPart();
+	SnakeBodyPart(const SDL_Rect& rect);
+	SnakeBodyPart(SDL_Renderer* ren);
+	~SnakeBodyPart();
 
-private:
-
+	void move() override;
 };
