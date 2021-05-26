@@ -11,9 +11,11 @@ public:
 	IDrawable(std::string path, SDL_Renderer* ren);
 	~IDrawable();
 
-	void init(std::string path, SDL_Renderer* ren, unsigned int heightParts, unsigned int widthParts);
+	void init(std::string path, SDL_Renderer* ren, unsigned int heightPixels, unsigned int widthPixels);
 	static SDL_Texture* getTexture(std::string path, SDL_Renderer* ren);
 
+	void setTexture(SDL_Texture* texture);
+	void setSrcRect(SDL_Rect* src);
 	void setDestRect(SDL_Rect* dest);
 
 	SDL_Texture* getTexture();
