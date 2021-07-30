@@ -1,14 +1,7 @@
 #pragma once
 
 #include "GameObject.h"
-
-enum class Direction
-{
-	West,
-	East,
-	South,
-	North
-};
+#include "Common.h"
 
 class IMoveable : public GameObject
 {
