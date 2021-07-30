@@ -17,7 +17,10 @@ IDrawable::IDrawable(std::string path, SDL_Renderer* ren) : IDrawable()
 
 IDrawable::~IDrawable()
 {
-	SDL_DestroyTexture(m_texture);
+	if (m_texture != nullptr)
+	{
+		SDL_DestroyTexture(m_texture);
+	}
 }
 
 void IDrawable::init(std::string path, SDL_Renderer* ren, unsigned int heightPixels, unsigned int widthPixels)
