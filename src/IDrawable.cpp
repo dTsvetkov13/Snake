@@ -1,4 +1,7 @@
 #include "IDrawable.h"
+#include "Engine.h"
+
+#include <iostream>
 
 IDrawable::IDrawable()
 {
@@ -9,7 +12,7 @@ IDrawable::IDrawable()
 
 IDrawable::IDrawable(std::string path, SDL_Renderer* ren) : IDrawable()
 {
-	m_texture = getTexture(path, ren);
+	m_texture = loadTexture(path, ren);
 }
 
 IDrawable::~IDrawable()
@@ -19,24 +22,20 @@ IDrawable::~IDrawable()
 
 void IDrawable::init(std::string path, SDL_Renderer* ren, unsigned int heightPixels, unsigned int widthPixels)
 {
+	m_dest.x = m_src.x;
+	m_dest.y = m_src.y;
 	m_src.x = 0;
 	m_src.y = 0;
 	SDL_Surface* sur = IMG_Load(path.c_str());
-	m_src.h = sur->h;
-	m_src.w = sur->w;
+	if (sur != nullptr)
+	{
+		m_src.h = sur->h;
+		m_src.w = sur->w;
+	}
+	
 	m_dest.h = heightPixels;
 	m_dest.w = widthPixels;
-	m_texture = getTexture(path, ren);
-}
-
-SDL_Texture* IDrawable::getTexture(std::string path, SDL_Renderer* ren)
-{
-	SDL_Surface* sur = IMG_Load(path.c_str());
-
-	SDL_Texture* tex = SDL_CreateTextureFromSurface(ren, sur);
-
-	SDL_FreeSurface(sur);
-	return tex;
+	m_texture = loadTexture(path, ren);
 }
 
 void IDrawable::setTexture(SDL_Texture* texture)
