@@ -26,6 +26,11 @@ void IDrawable::init(std::string path, SDL_Renderer* ren, unsigned int heightPix
 	m_dest.y = m_src.y;
 	m_src.x = 0;
 	m_src.y = 0;
+
+	m_texture = loadTexture(path, ren);
+
+	path = "../assets/" + path;
+
 	SDL_Surface* sur = IMG_Load(path.c_str());
 	if (sur != nullptr)
 	{
@@ -35,7 +40,6 @@ void IDrawable::init(std::string path, SDL_Renderer* ren, unsigned int heightPix
 	
 	m_dest.h = heightPixels;
 	m_dest.w = widthPixels;
-	m_texture = loadTexture(path, ren);
 }
 
 void IDrawable::setTexture(SDL_Texture* texture)
